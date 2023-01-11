@@ -2,7 +2,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
 ## Demo
-![Task tracker](https://github.com/PolinaZaprudskaya/ToDo-Angular/blob/develop/tech-test/demo.gif)
+![Task tracker](https://github.com/PolinaZaprudskaya/ToDo-Angular/blob/master/tech-test/demo.gif)
 
 ## Quick start
 
@@ -18,5 +18,5 @@ cd tech-test
 `npm run test`
 
 ## Unit Tests
-![unit test 1](https://github.com/PolinaZaprudskaya/ToDo-Angular/blob/develop/tech-test/unit-test-1.png)
-![unit test 2](https://github.com/PolinaZaprudskaya/ToDo-Angular/blob/develop/tech-test/unit-test-2.png)
+![unit test 1](https://github.com/PolinaZaprudskaya/ToDo-Angular/blob/master/tech-test/unit-test-1.png)
+![unit test 2](https://github.com/PolinaZaprudskaya/ToDo-Angular/blob/master/tech-test/unit-test-2.png)
