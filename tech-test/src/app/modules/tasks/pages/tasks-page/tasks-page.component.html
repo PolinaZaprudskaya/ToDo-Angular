@@ -1,0 +1,33 @@
+<h1 class="title">Tasks</h1>
+<div class="search-wrapper">
+  <app-input-wrapper
+    [label]="'Search'"
+    [hasError]="false"
+  >
+    <app-input
+      [placeholder]="'Type something...'"
+      [(value)]="searchValue"
+      (valueChange)="filterBySearchAndCategory()"
+    ></app-input>
+  </app-input-wrapper>
+</div>
+
+<app-tasks-list [tasks]="tasks$ | async"></app-tasks-list>
+<button class="create-new-task-button" (click)="navigate()">+</button>
+<button class="filter-button" (click)="openFilters()">
+  <span class="filter-icon"></span>
+</button>
+
+<div *ngIf="isOpenFilters" class="filter-wrapper">
+  <app-input-wrapper
+    [label]="'Filter by category'"
+    [hasError]="false"
+    [withoutBackground]="true"
+  >
+    <app-radio-button
+      [items]="categories"
+      [(value)]="selectedCategory"
+      (valueChange)="filterBySearchAndCategory()"
+    ></app-radio-button>
+  </app-input-wrapper>
+</div>

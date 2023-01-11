@@ -1,0 +1,9 @@
+<div #diagram></div>
+<div class="legend">
+  <ul>
+    <li *ngFor="let item of groupedTasks">
+      <span>{{item[0]}}: </span>
+      <span [ngStyle]="{color: typeAndColor[item[0]]}">{{item[1]}}</span>
+    </li>
+  </ul>
+</div>

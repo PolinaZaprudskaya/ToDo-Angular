@@ -1,0 +1,12 @@
+<div class="input-container">
+  <input
+    class="input"
+    [ngClass]="{'readonly': readonly}"
+    [type]="'text'"
+    [(ngModel)]="value"
+    [readOnly]="readonly"
+    [placeholder]="placeholder"
+    (input)="onChange($event.target.value); valueChange.emit($event.target.value)"
+    (blur)="onTouched()"
+  />
+</div>

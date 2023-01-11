@@ -1,0 +1,72 @@
+@import 'src/assets/styles/colors';
+
+.education {
+  background-color: $purple;
+
+  &-icon {
+    background-image: url('../../assets/icons/education.svg');
+  }
+
+  &-light {
+    background-color: $purpleLight;
+  }
+}
+
+.sport {
+  background-color: $blue;
+
+  &-icon {
+    background-image: url('../../assets/icons/sport.svg');
+  }
+
+  &-light {
+    background-color: $blueLight;
+  }
+}
+
+.health {
+  background-color: $green;
+  &-icon {
+    background-image: url('../../assets/icons/health.svg');
+  }
+
+  &-light {
+    background-color: $greenLight;
+  }
+}
+
+.work {
+  background-color: $pink;
+
+  &-icon {
+    background-image: url('../../assets/icons/work.svg');
+  }
+
+  &-light {
+    background-color: $pinkLight;
+  }
+}
+
+.house {
+  background-color: $orange;
+
+  &-icon {
+    background-image: url('../../assets/icons/house.svg');
+  }
+
+  &-light {
+    background-color: $orangeLight;
+  }
+}
+
+.bureaucracy {
+  background-color: $mint;
+
+  &-icon {
+    background-image: url('../../assets/icons/bureaucracy.svg');
+  }
+
+  &-light {
+    background-color: $mintLight;
+  }
+}

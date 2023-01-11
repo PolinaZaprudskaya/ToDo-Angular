@@ -1,0 +1,40 @@
+@import 'src/assets/styles/colors';
+
+:host {
+  .input-wrapper {
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $white;
+      border-radius: 10px;
+      border: 2px solid transparent;
+
+      &.readonly {
+        background: transparent;
+        color: $white;
+      }
+
+      &.error {
+        border: 2px solid $red;
+      }
+
+      &.transparent {
+        background: transparent;
+      }
+    }
+
+    .label {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $white;
+      margin-bottom: 6px;
+
+      &.error {
+        color: $red;
+      }
+    }
+  }
+}

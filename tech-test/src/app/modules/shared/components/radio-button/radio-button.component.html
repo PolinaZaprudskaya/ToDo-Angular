@@ -1,0 +1,16 @@
+<ng-container *ngFor="let item of items">
+  <div class="container">
+    <label>
+      <input
+        [type]="'radio'"
+        [checked]="item.value === value"
+        [value]="item.value"
+        [ngModel]="value"
+        (ngModelChange)="change(item.value)"
+        name="radio"
+      />
+      <span class="name">{{item.name}}</span>
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</ng-container>

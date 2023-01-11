@@ -1,0 +1,7 @@
+<div
+  class="task-item-wrapper"
+  [appTaskTheme]="{ category: task.category, theme: theme, withIcon: true }"
+>
+  <h3 class="label" (click)="navigate()">{{task.label}}</h3>
+  <app-checkbox [(value)]="!!task.done" (valueChange)="updateValue($event)"></app-checkbox>
+</div>

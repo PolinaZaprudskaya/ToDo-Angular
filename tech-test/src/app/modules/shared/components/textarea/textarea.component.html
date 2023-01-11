@@ -1,0 +1,14 @@
+<div class="input-container">
+  <textarea
+    class="input"
+    draggable="false"
+    [ngClass]="{'readonly': readonly}"
+    [rows]="10"
+    [cols]="45"
+    [(ngModel)]="value"
+    [readOnly]="readonly"
+    [placeholder]="placeholder"
+    (input)="onChange($event.target.value)"
+    (blur)="onTouched()"
+  ></textarea>
+</div>

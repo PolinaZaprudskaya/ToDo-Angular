@@ -1,0 +1,52 @@
+@import 'src/assets/styles/colors';
+@import 'src/assets/styles/font-sizes';
+
+:host {
+  width: 100%;
+
+  .input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+
+    .input {
+      border: 0;
+      border-radius: 10px;
+      padding: 0 19px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      outline: 0;
+      background: transparent;
+
+      &.readonly {
+        padding: 0;
+        color: $white;
+      }
+    }
+
+    input::placeholder {
+      color: $blue;
+    }
+
+    input::-webkit-textfield-decoration-container {
+      visibility: hidden;
+    }
+
+    input {
+      font-family: $fontSizeNunito;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      width: 100%;
+      position: relative;
+      height: 48px;
+      background: none;
+      outline: none;
+    }
+
+  }
+}

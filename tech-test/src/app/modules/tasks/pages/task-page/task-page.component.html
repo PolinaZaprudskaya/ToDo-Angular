@@ -1,0 +1,72 @@
+<div class="back-home" (click)="navigateToAllTasks()">< All tasks</div>
+<div class="header">
+  <h2>Task information</h2>
+  <span
+    class="icon"
+    [ngClass]="editMode ? 'close-icon' : 'edit-icon'"
+    (click)="editMode = !editMode"
+  ></span>
+</div>
+
+<ng-container *ngIf="task">
+
+  <ng-container *ngIf="editMode; else text">
+    <div class="task-content">
+      <form class="form" [formGroup]="taskForm">
+        <app-input-wrapper
+          [label]="'Label'"
+          [errorMessage]="'Type label for the task'"
+          [hasError]="!!label.errors"
+        >
+          <app-input
+            [formControlName]="'label'"
+            [placeholder]="'Label'"
+          ></app-input>
+        </app-input-wrapper>
+
+        <app-input-wrapper
+          [label]="'Description'"
+          [errorMessage]="'Type description for the task'"
+          [hasError]="!!description.errors"
+        >
+          <app-textarea
+            [formControlName]="'description'"
+            [placeholder]="'Description'"
+          ></app-textarea>
+        </app-input-wrapper>
+
+        <app-input-wrapper
+          [label]="'Category'"
+          [errorMessage]="''"
+          [hasError]="!!category.errors"
+          [withoutBackground]="true"
+        >
+          <app-radio-button
+            [formControlName]="'category'"
+            [items]="categories"
+          ></app-radio-button>
+        </app-input-wrapper>
+      </form>
+      <button
+        class="save-button"
+        [disabled]="isLoading || !!label.errors || !!description.errors || !!category.errors"
+        (click)="updateTaskInfo()"
+      >Save
+      </button>
+    </div>
+  </ng-container>
+
+  <ng-template #text>
+    <div class="task-content" [appTaskTheme]="{ category: task.category, theme: theme }">
+      <span class="icon delete-icon" (click)="deleteTask(task)"></span>
+      <h2>{{task.label}}</h2>
+      <p>{{task.description}}</p>
+      <p>Category: {{task.category}}</p>
+      <p *ngIf="task.done">Done: {{task.done}}</p>
+    </div>
+    <span class="statistic-link" (click)="navigateToStatistic()">Check statistic</span>
+  </ng-template>
+</ng-container>
+
+
+

@@ -1,0 +1,19 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+@import 'src/assets/styles/task-theme';
+@import 'src/assets/styles/font-sizes';
+@import 'src/assets/styles/colors';
+
+html {
+  font-family: $fontSizeNunito;
+  background: $background;
+  color: $white;
+}
+
+body {
+  margin: 20px;
+}
+
+.back-home {
+  cursor: pointer;
+}
+

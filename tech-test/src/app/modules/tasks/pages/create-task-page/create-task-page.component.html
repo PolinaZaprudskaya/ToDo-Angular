@@ -1,0 +1,47 @@
+<div class="back-home" (click)="navigateToAllTasks()">< All tasks</div>
+<div class="header">
+  <h2>Create task</h2>
+  <button
+    class="create-button"
+    [disabled]="isLoading || !!label.errors || !!description.errors || !!category.errors"
+    (click)="createTask()"
+  >Create</button>
+</div>
+
+<div class="task-content">
+  <form class="form" [formGroup]="taskForm">
+    <app-input-wrapper
+      [label]="'Label'"
+      [errorMessage]="'Type label for the task'"
+      [hasError]="false"
+    >
+      <app-input
+        [formControlName]="'label'"
+        [placeholder]="'Label'"
+      ></app-input>
+    </app-input-wrapper>
+
+    <app-input-wrapper
+      [label]="'Description'"
+      [errorMessage]="'Type description for the task'"
+      [hasError]="false"
+    >
+      <app-textarea
+        [formControlName]="'description'"
+        [placeholder]="'Description'"
+      ></app-textarea>
+    </app-input-wrapper>
+
+    <app-input-wrapper
+      [label]="'Category'"
+      [errorMessage]="''"
+      [hasError]="false"
+      [withoutBackground]="true"
+    >
+      <app-radio-button
+        [formControlName]="'category'"
+        [items]="categories"
+      ></app-radio-button>
+    </app-input-wrapper>
+  </form>
+</div>

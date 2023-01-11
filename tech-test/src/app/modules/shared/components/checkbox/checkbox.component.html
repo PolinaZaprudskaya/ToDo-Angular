@@ -1,0 +1,5 @@
+<div class="checkbox-wrapper">
+  <label [ngClass]="{'checked': value}">
+    <input type="checkbox" [value]="value" [checked]="value" (input)="valueChange.emit(!value)">
+  </label>
+</div>

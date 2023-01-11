@@ -1,0 +1,46 @@
+@import 'src/assets/styles/colors';
+
+:host {
+  .checkbox-wrapper {
+    display: flex;
+
+    input {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content:'';
+        -webkit-appearance: none;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 12.5px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+    }
+
+    .checked:after {
+      background-color: $white;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 5px;
+      border-radius: 5px;
+      padding: 12.5px;
+      background-image: url('./checkbox.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

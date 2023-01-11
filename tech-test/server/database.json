@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "label": "English class",
+      "description": "Some description",
+      "category": "work",
+      "done": false
+    },
+    {
+      "id": 2,
+      "label": "Clean house",
+      "description": "Some description",
+      "category": "house",
+      "done": false
+    },
+    {
+      "id": 3,
+      "label": "Pole dance",
+      "description": "Some description",
+      "category": "sport",
+      "done": false
+    },
+    {
+      "id": 4,
+      "label": "Gym",
+      "description": "Some description",
+      "category": "sport",
+      "done": false
+    },
+    {
+      "id": 5,
+      "label": "English class 2",
+      "description": "Some description",
+      "category": "education",
+      "done": false
+    },
+    {
+      "id": 6,
+      "label": "Walking",
+      "description": "Some description",
+      "category": "health",
+      "done": false
+    }
+  ]
+}

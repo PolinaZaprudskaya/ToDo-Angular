@@ -1,0 +1,71 @@
+@import 'src/assets/styles/colors';
+@import 'src/assets/styles/font-sizes';
+
+:host {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+  };
+
+  .save-button {
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: green;
+    color: $white;
+    text-transform: uppercase;
+    margin-left: auto;
+    display: flex;
+    font-family: $fontSizeNunito;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .task-content {
+    position: relative;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+
+    .form {
+      display: grid;
+      grid-gap: 20px;
+    }
+  }
+
+  .icon {
+    cursor: pointer;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .close-icon {
+    background-image: url('../../../../../assets/icons/close.svg');
+  }
+
+  .edit-icon {
+    background-image: url('../../../../../assets/icons/edit.svg');
+  }
+
+  .delete-icon {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    background-image: url('../../../../../assets/icons/delete.svg');
+  }
+
+  .statistic-link {
+    color: $brightBlue;
+    margin: 20px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,41 @@
+@import 'src/assets/styles/colors';
+@import 'src/assets/styles/font-sizes';
+
+:host {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+
+    .create-button {
+      border-radius: 20px;
+      border: 0;
+      padding: 10px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: $darkGreen;
+      color: $white;
+      text-transform: uppercase;
+      margin-left: auto;
+      display: flex;
+      font-family: $fontSizeNunito;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  };
+
+  .task-content {
+    position: relative;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+
+    .form {
+      display: grid;
+      grid-gap: 20px;
+    }
+  }
+}
